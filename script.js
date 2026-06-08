@@ -16,10 +16,10 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const projectsData = [
     {
         id: 1,
-        title: "Proto Type",
+        title: "ApexCreative",
         description: "A modern, responsive landing page showcasing cutting-edge design principles and smooth user interactions. Built with performance and conversion optimization in mind.",
         url: "https://proto-tyype.netlify.app/",
-        github: "https://github.com/samuelofori/proto-type",
+        // github: "https://github.com/samuelofori/proto-type",
         category: "landing",
         techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
         thumbnail: "images/proto type.png"
@@ -29,31 +29,33 @@ const projectsData = [
         title: "Slay Body Piercing",
         description: "Professional piercing studio website with booking system and gallery. Features modern aesthetics with smooth animations and intuitive user experience.",
         url: "https://slaybodypiercing.netlify.app/",
-        github: "https://github.com/samuelofori/slay-body-piercing",
-        category: "landing",
+        // github: "https://github.com/samuelofori/slay-body-piercing",
+        category: "Booking Website",
         techStack: ["React", "CSS3", "Booking System", "Gallery"],
         thumbnail: "images/slay body piercing.png"
     },
-    {
-        id: 3,
-        title: "Stella Commerce",
-        description: "Full-featured e-commerce platform with product catalog, shopping cart, and secure checkout. Optimized for conversions and mobile shopping experience.",
-        url: "https://stellacommerce.netlify.app/",
-        github: "https://github.com/samuelofori/stella-commerce",
-        category: "ecommerce",
-        techStack: ["JavaScript", "Stripe API", "E-Commerce", "Mobile-First"],
-        thumbnail: "images/Stella.png"
-    },
+    // {
+    //     id: 3,
+    //     title: "Stella Commerce",
+    //     description: "Full-featured e-commerce platform with product catalog, shopping cart, and secure checkout. Optimized for conversions and mobile shopping experience.",
+    //     url: "https://stellacommerce.netlify.app/",
+    //     github: "https://github.com/samuelofori/stella-commerce",
+    //     category: "ecommerce",
+    //     techStack: ["JavaScript", "Stripe API", "E-Commerce", "Mobile-First"],
+    //     thumbnail: "images/Stella.png"
+    // },
     {
         id: 4,
-        title: "Naria Valen",
-        description: "Elegant personal portfolio website showcasing creative design and smooth animations. Features modern UI components and optimized user experience.",
-        url: "https://naria-valen.netlify.app/",
-        github: "https://github.com/samuelofori/naria-valen",
-        category: "portfolio",
-        techStack: ["HTML5", "CSS3", "JavaScript", "Animation"],
-        thumbnail: "images/Naria-Valen.png"
-    }
+        title: "Allruing Accent",
+        description: "Alluring Accent is an elegant, modern e-commerce platform designed for a premium jewelry brand. It features a sophisticated pink-and-black visual identity, a seamless customer storefront, and a robust, secure administrative dashboard for real-time inventory tracking, order management, and dynamic promotional campaigning.",
+        url: "https://alluringaccent.com",
+        // github: "https://github.com/samuelofori/alluring-accent",
+        category: "ecommerce",
+        techStack: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Express", "MongoDB", "Stripe API", "E-Commerce", "Mobile-First"],
+        thumbnail: "images/alluringaccent.png"
+    },
+
+  
 ];
 
 // State Management

@@ -995,6 +995,52 @@ section {
     padding: 0 0.5rem;
 }
 
+.education {
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
+}
+
+.education-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    padding-left: var(--spacing-lg);
+}
+
+.education-item {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+
+}
+
+.education-degree {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.education-institution {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.education-year {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.education-description {
+    font-size: 1rem;
+    color: var(--text-secondary);   
+    line-height: 1.6;
+    margin-top: var(--spacing-sm);  
+}
+
 /* Footer */
 .footer {
     background: var(--bg-dark);
