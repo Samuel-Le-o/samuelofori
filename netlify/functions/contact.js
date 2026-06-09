@@ -141,7 +141,18 @@ exports.handler = async (event) => {
                 to: [toEmail],
                 reply_to: email,
                 subject: `Portfolio Contact: ${subject}`,
-                    text: `New portfolio contact form submission\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`,
+                text: `New portfolio contact form submission\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`,
+                html: `
+                    <h2>New portfolio contact form submission</h2>
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Subject:</strong> ${subject}</p>
+                    <p><strong>Message:</strong></p>
+                    <p>${message.replace(/\n/g, '<br>')}</p>
+                `
+            })
+        });
+
         const resendData = await resendResponse.json();
 
         if (!resendResponse.ok) {

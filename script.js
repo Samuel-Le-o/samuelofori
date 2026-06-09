@@ -379,8 +379,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Project card hover effects
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
+const projectCardHoverElements = document.querySelectorAll('.project-card');
+projectCardHoverElements.forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px) scale(1.02)';
     });
@@ -391,8 +391,8 @@ projectCards.forEach(card => {
 });
 
 // Service card hover effects
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
+const serviceCardHoverElements = document.querySelectorAll('.service-card');
+serviceCardHoverElements.forEach(card => {
     card.addEventListener('mouseenter', function() {
         const icon = this.querySelector('.service-icon');
         if (icon) {
