@@ -141,17 +141,7 @@ exports.handler = async (event) => {
                 to: [toEmail],
                 reply_to: email,
                 subject: `Portfolio Contact: ${subject}`,
-                html: `
-                    <h2>New portfolio contact form submission</h2>
-                    <p><strong>Name:</strong> ${name}</p>
-                    <p><strong>Email:</strong> ${email}</p>
-                    <p><strong>Subject:</strong> ${subject}</p>
-                    <p><strong>Message:</strong></p>
-                    <p>${message.replace(/\n/g, '<br>')}</p>
-                `
-            })
-        });
-
+                    text: `New portfolio contact form submission\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`,
         const resendData = await resendResponse.json();
 
         if (!resendResponse.ok) {
@@ -161,14 +151,21 @@ exports.handler = async (event) => {
                 resendData?.error ||
                 'Unable to send email at this time.';
 
+            console.error('Resend API error:', {
+                status: resendResponse.status,
+                body: resendData
+            });
+
             return jsonResponse(502, {
                 message: errorMessage,
-                providerStatus: resendResponse.status
+                providerStatus: resendResponse.status,
+                providerError: resendData
             });
         }
 
         return jsonResponse(200, { message: 'Message sent successfully.' });
     } catch (error) {
+        console.error('Contact function unexpected error:', error);
         return jsonResponse(500, { message: 'Unexpected server error while sending your message.' });
     }
 };

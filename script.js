@@ -211,11 +211,15 @@ async function submitContactForm(payload) {
     }
     if (!response.ok) {
         const errorMessage = result?.message || 'Unable to send your message right now. Please try again.';
+        const error = new Error(errorMessage);
+        error.status = response.status;
+        error.details = result;
+
         console.error('Contact form submit failed', {
             status: response.status,
             result
         });
-        throw new Error(errorMessage);
+        throw error;
     }
 
     return result;
